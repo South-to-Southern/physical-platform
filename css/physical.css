@@ -1,0 +1,72 @@
+#score {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  font-size: 3rem;
+  color: #eeeeee;
+}
+
+#describe {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  font-size: 2rem;
+  color: #eeeeee;
+}
+
+#physical {
+  position: absolute;
+  bottom: 60px;
+  left: 720px;
+  text-align: center;
+  z-index: 100;
+  display: block;
+  color: white;
+  font-size: 2rem;
+}
+
+.head_image {
+  color: black;
+  font-size: 30px;
+  line-height: 81px;
+  border-right: transparent;
+  z-index: 100;
+  right: 0;
+  position: absolute;
+  margin-top: 0px;
+  background-color: transparent;
+  font-family: 'icomoon';
+  width: 100px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.head_imagefont,
+.head_imagefont1 {
+  color: black;
+  font-size: 5px;
+  line-height: 81px;
+  border-right: transparent;
+  z-index: 100;
+  right: 5px;
+  position: absolute;
+  margin-top: 30px;
+  background-color: transparent;
+  font-family: 'icomoon';
+  border: transparent;
+}
+
+.head_imagefont1 {
+  margin-top: 0px;
+  right: 600px;
+  font-size: 30px;
+  border-width: 2em;
+  border-color: aqua;
+  border: solid;
+  width: 300px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}

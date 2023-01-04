@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\Webshell]
+@="URL:Webshell Protocol Handler"
+"URL Protocol"=""
+[HKEY_CLASSES_ROOT\Webshell\DefaultIcon]
+@="C:\Users\Lenovo\Desktop\gsys\for_redistribution_files_only\gsys.exe"
+[HKEY_CLASSES_ROOT\Webshell\shell]
+[HKEY_CLASSES_ROOT\Webshell\shell\open]
+[HKEY_CLASSES_ROOT\Webshell\shell\open\command]
+@="\"C:\\Users\\Lenovo\\Desktop\\gsys\\for_redistribution_files_only\\gsys.exe\" \"%1\""

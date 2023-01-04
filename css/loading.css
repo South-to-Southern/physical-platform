@@ -1,0 +1,270 @@
+.loading {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header_back {
+  height: 81px;
+  width: 1200px;
+  background-color: black;
+
+  position: relative;
+}
+.logo {
+  float: left;
+  margin-left: 30px;
+  background-color: white;
+  background-image: url('#');
+  width: 200px;
+  height: 81px;
+  cursor: pointer;
+}
+.loading_peo,
+.head_image,
+.register {
+  color: white;
+  font-size: 15px;
+  line-height: 81px;
+  right: 0;
+  float: right;
+  margin-right: 20px;
+  background-color: transparent;
+  font-family: 'icomoon';
+}
+.Info {
+  height: 700px;
+  width: 1200px;
+  background-image: url('../image/loading/1.png');
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+.autoplay {
+  width: 421px;
+  height: 100%;
+
+  float: right;
+  position: relative;
+}
+.videolable {
+  color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  font-weight: bold;
+  margin-top: 205px;
+  font-size: 20px;
+}
+.video {
+  width: 346px;
+  height: 218px;
+  position: absolute;
+  left: 50%;
+  margin-left: -173px;
+  top: 50%;
+  margin-top: -109px;
+}
+.Infoma {
+  position: absolute;
+  margin-top: 150px;
+  width: 550px;
+  height: 400px;
+  background-color: black;
+}
+.Infotitle {
+  color: white;
+  position: absolute;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 200px;
+  line-height: 1.5;
+  margin-left: 50px;
+}
+
+.Explaination {
+  color: white;
+  position: absolute;
+  font-size: 15px;
+  margin-top: 200px;
+  text-indent: 2em;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.start {
+  width: 154px;
+  height: 42px;
+  font-size: 14px;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 10%);
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  top: 280px;
+  margin-left: 200px;
+  transition: all 1s;
+}
+.start:hover {
+  background-color: skyblue;
+}
+.section {
+  width: 1200px;
+  margin: 0 auto;
+}
+.leader {
+  border-bottom: 2px solid gray;
+  height: 51px;
+  background-color: white;
+}
+section ul li {
+  float: left;
+  width: 100px;
+  height: 51px;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.current {
+  background-color: skyblue;
+  z-index: 1;
+}
+.basic {
+  font-size: 22px;
+  font-weight: 600px;
+}
+.doc1 {
+  width: 800px;
+  height: 400px;
+  left: 50%;
+  margin-left: 200px;
+}
+section ul li:hover {
+  z-index: 1;
+  border-bottom: 2px solid blue;
+}
+.item {
+  display: block;
+}
+.noitem {
+  display: none;
+}
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: #000;
+  opacity: 0.75;
+  display: none;
+}
+
+.launch {
+  display: none;
+  background-repeat: no-repeat;
+  background-image: url('../image/loading/background.png');
+  width: 678px;
+  height: 482px;
+  left: 50%;
+  margin-left: -339px;
+  position: fixed;
+  background-size: cover;
+  top: 50%;
+  margin-top: -241px;
+  background-color: transparent;
+  border-radius: 2px;
+  z-index: 9999;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.quit {
+  font-family: 'icomoon';
+  font-size: 60px;
+  color: black;
+  background-color: transparent;
+  position: absolute;
+  left: 580px;
+  top: 40px;
+}
+.choosesystem {
+  position: absolute;
+  left: 400px;
+  top: 200px;
+}
+.choosesystem label {
+  padding-left: 20px;
+}
+.title h4 {
+  position: absolute;
+  left: 380px;
+  letter-spacing: 1em;
+  top: 100px;
+  font-size: 22px;
+}
+.title h6 {
+  position: absolute;
+  left: 360px;
+  top: 130px;
+  font-size: 10px;
+}
+.acc {
+  position: absolute;
+  left: 360px;
+  top: 250px;
+}
+.account input {
+  position: absolute;
+  left: 420px;
+  top: 260px;
+  height: 30px;
+}
+.pass {
+  position: absolute;
+  left: 360px;
+  top: 330px;
+}
+.password input {
+  position: absolute;
+  left: 420px;
+  top: 350px;
+  height: 30px;
+}
+.signin {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 420px;
+  left: 450px;
+  border: 1px solid black;
+}
+
+.signin:hover {
+  background-color: blue;
+}
+.msg {
+  display: none;
+  width: 300px;
+  height: 150px;
+  margin: 100 auto;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  left: 200px;
+  opacity: 0.75;
+}
+.close {
+  background-color: aqua;
+  border: 1px solid black;
+  padding: 1px 10px;
+  float: right;
+}
+footer {
+  width: 1600px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -10;
+  text-align: center;
+  border-top: 1px solid skyblue;
+}

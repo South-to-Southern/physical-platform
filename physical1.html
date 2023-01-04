@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分光计的综合运用在线仿真平台</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./css/physical1.css">
+  <link rel="stylesheet" href="./css/intital.css">
+  <link rel="stylesheet" href="./css/physical2.css">
+  <link rel="stylesheet" href="./css/physical3.css">
+  <link rel="stylesheet" href="./css/physical4.css">
+</head>
+
+<body>
+  <div class="a5" id="aa5">分光计的调节</div>
+  <div class="msg">
+    <ul>
+      <li>
+        各半调节法：若观察到的亮十字像与叉丝上准线的垂直距离为h，调节望远镜仰角使差距减小为（1/2）h，再调节载物台下靠前面的水平调节订a（或b）（上述两螺钉连线与镜面垂直的螺钉，设为a，b），消除另一半距离，使上准线与亮“十”字像重合。再将载物台转180°，使望远镜对平面镜的另一反射面，采用上述同样的方法调节，如此重复多次，直至转动载物台时，无论哪个面正对望远镜，亮“十”字像都能与分划板上方的水平准线重合为止，则说明望远镜光轴已垂直于分光计主轴。
+      </li>
+    </ul>
+    <button class="close" onclick="closedown()">关闭</button>
+  </div>
+  <button class="a" onclick="next0()">三棱镜顶角以及折射率的测量</button>
+  <button class="a0" onclick="next0()"></button>
+  <div class="a1" id="abc">
+    <div class="a3">实验目的</div>
+    <button class="a10" onclick="next()"></button>
+    <div class="a2">
+      （1）了解分光计的结构以及各组成部件的作用</br>
+      （2）掌握分光计的调节方法</div>
+  </div>
+  <div class="a1" id="abd">
+    <div class="a3">课前测试</div>
+    <div class="a8">
+      1.各半调节法的基本作用是：用各半调节法可以比较容易快速的逼近正确的位置，减少几个面的调节中，互相之间产生的干扰。</div>
+    <div class="a7">
+      <label for="A"> <input name="link" type="radio" id="A" />对</label></br>
+      <label for="B"> <input name="link" type="radio" id="B1" />错</label></br>
+    </div>
+    <button class="a10" onclick="next1()"></button>
+  </div>
+  <div class="a12" id="abe">
+    <div class="a3">课前测试</div>
+    <div class="a8">
+      2.在调节望远镜光轴与分光计轴垂直时转动载物台的目的是（）</div>
+    <div class="a11">
+      <label for="C"> <input name="link" type="radio"
+          id="C" />A:由于一条直线不能确定一个平面，只有两条直线才能确定一个平面。只有两个位置都调节好了，才能确定载物台是水平的</label></br>
+      <label for="D"> <input name="link" type="radio" id="D" />B:为了调节结果更加精确</label></br>
+      <label for="E"> <input name="link" type="radio" id="E" />C:纯粹为了增加实验难度</label></br>
+      <label for="F"> <input name="link" type="radio" id="F" />D:为了后续实验做准备</label>
+    </div>
+    <button class="a13" onclick="next2()"></button>
+  </div>
+  <div class="a12" id="abf">
+    <div class="a3">课前测试</div>
+    <div class="a8">
+      3.载物台面下的三颗螺丝的作用是什么（）</div>
+    <div class="a11">
+      <label for="C"> <input name="link" type="radio" id="1C" />A:为了美观</label></br>
+      <label for="D"> <input name="link" type="radio" id="1D" />B:为了加强固定并且需要时可以拆卸</label></br>
+      <label for="E"> <input name="link" type="radio" id="1E" />C:仅仅是为了调节载物台面的高度以便于观察</label></br>
+      <label for="F"> <input name="link" type="radio" id="1F" />D:三点确定一个平面，为了调节载物台面与分光计主轴垂直</label>
+    </div>
+    <button class="a13" onclick="next3()"></button>
+  </div>
+  <!-- 实验步骤 -->
+  <div class="q1" id="q1">实验步骤</br>
+    <div class="qq2">
+      <button class="q2" onclick="c2()" id="q2">调节望远镜聚焦无穷远</button>
+      <div class="q3"></div>
+    </div>
+    <div class="qq4">
+      <button class="q4" onclick="c4()" id="q4">望远镜光轴与分光计轴垂直</button>
+      <div class="q5"></div>
+    </div>
+    <div class="qq6"><button class="q6" onclick="c6()" id="q6">载物台面与分光计主轴垂直</button>
+      <div class="q7"></div>
+    </div>
+    <div class="qq8"><button class="q8" onclick="c8()" id="q8">平行光管光轴与望远镜光轴平行</button>
+      <div class="qq7"></div>
+    </div>
+  </div>
+  <div class="q9" id="q9">
+    <div class="q1q"> 调节望远镜聚焦无穷远
+      <button class="q2q" onclick="c9()"></button>
+    </div>
+    <div class="qq01"> <button class="q01" onclick="c10()" id="q01">打开灯源开关，调节目镜调焦手轮，使望远镜内“╪”形叉丝线在分划板上清晰可见</button>
+      <div class="q02"></div><button class="m0" onclick="c11()">保存</button>
+    </div>
+    <div class="qq13"> <button class="q13" onclick="c12()" id="q13">将双面平面镜的一面贴在望远镜物镜上并观察反射的亮“十”</button>
+      <div class="q14"></div>
+      <button class="m1" onclick="c13()">保存</button>
+    </div>
+
+    <div class="qq15"> <button class="q15" onclick="c14()"
+        id="q15">若亮“十”字较模糊或看不到，可拧松目镜锁紧螺钉，前后伸缩目镜，直至亮“十”字清晰并拧紧目镜锁紧螺钉</button>
+      <div class="q16"></div>
+      <button class="m2" onclick="c15()">保存</button>
+    </div>
+  </div>
+  <div class="q10" id="q10">
+    <div class="q3q"> 望远镜光轴与分光计轴垂直
+      <button class="q4q" onclick="c16()"></button>
+    </div>
+    <div class="qq19"><button class="q19" onclick="c17()" id="q19">将平面镜置于载物台中心位置并使镜面与台面下方任意两螺钉的连线垂直</button>
+      <div class="q20"></div>
+      <button class="m3" onclick="c18()">保存</button>
+    </div>
+    <div class="qq21"> <button class="q21" onclick="c19()" id="q21">转动游标盘，使前后镜面分别正对望远镜，通过望远镜观察反射的亮“十”字</button>
+      <div class="q22"></div>
+      <button class="m4" onclick="c20()">保存</button>
+    </div>
+    <div class="qq23"><button class="q23" onclick="c21()"
+        id="q23">若在目镜中不到反射的亮“十”字，应适当调整望远镜俯仰以及平面镜俯仰/判断亮“十”字与上叉丝线的距离，利用各半调节方法使两面反射的亮“十”字均与“╪”形叉丝上交点重合</button>
+      <div class="q24"></div>
+      <button class="m5" onclick="c22()">保存</button>
+    </div>
+  </div>
+  <div class="q11" id="q11">
+    <div class="q5q"> 载物台面与分光计主轴垂直</div>
+    <button class="q6q" onclick="c23()"></button>
+    <div class="qq24"> <button class="q25" onclick="c24()" id="q25">将平面镜旋转90°，令其镜面正对台面下第三颗螺钉</button>
+      <div class="q26"></div>
+      <button class="m7" onclick="c25()">保存</button>
+    </div>
+
+    <div class="qq25"> <button class="q27" onclick="c26()" id="q27">转动黑色游标盘，使镜面正对望远镜</button>
+      <div class="q28"></div>
+      <button class="m8" onclick="c27()">保存</button>
+    </div>
+
+    <div class="qq26"> <button class="q29" onclick="c28()" id="q29">在目镜中观察并通过调节c螺钉使反射的亮“十”字与“╪”形叉丝上的交点重合</button>
+      <div class="q30"></div>
+      <button class="m9" onclick="c29()">保存</button>
+    </div>
+  </div>
+  <div class="q12" id="q12">
+    <div class="q7q"> 平行光管光轴与望远镜光轴平行</div><button class="q8q" onclick="c30()"></button>
+    <div class="qq27"> <button class="q31" onclick="c31()" id="q31">打开低压汞灯，转动望远镜至正对平行光管位置</button>
+      <div class="q32"></div>
+      <button class="m10" onclick="c32()">保存</button>
+    </div>
+
+    <div class="qq28"> <button class="q33" onclick="c33()" id="q33">通过望远镜观察缝光松开锁紧螺，前后伸缩缝装置，把光线聚焦清晰</button>
+      <div class="q34"></div>
+      <button class="m11" onclick="c34()">保存</button>
+    </div>
+
+    <div class="qq29"> <button class="q35" onclick="c35()" id="q35">调节缝宽度控制螺钉调整缝宽，使透射光粗细合适</button>
+      <div class="q36"></div>
+      <button class="m12" onclick="c36()">保存</button>
+    </div>
+    <div class="qq30"> <button class="q37" onclick="c37()"
+        id="q37">旋转狭缝至水平位置，调节平行光管的俯仰螺钉，使观察到的光线与中间叉丝水平重合，将狭缝光转回至竖直位置</button>
+      <div class="q38"></div>
+      <button class="m13" onclick="c38()">保存</button>
+    </div>
+  </div>
+  <image class="fenhua" alt="请稍后" src="./assets/models/分划板.png"></image>
+  <button class="r1" onclick="z1()">左旋</button>
+  <button class="l1" onclick="z2()">右旋</button>
+  <div class="line">
+    <div class="heng"></div>
+    <div class="shu"></div>
+  </div>
+  <button class="opens2" onclick="z3()"></button>
+  <button class="downs2" onclick="z4()"></button>
+  <button class="r2" onclick="z5()">拧紧</button>
+  <button class="l2" onclick="z6()">拧松</button>
+  <button class="r3" onclick="z7()">伸</button>
+  <button class="l3" onclick="z8()">缩</button>
+  <button class="opens3" onclick="z9()">移上平面镜</button>
+  <button class="downs3" onclick="z10()">移下平面镜</button>
+  <button class="r8" onclick="z11()"></button>
+  <button class="r4" onclick="z12()"></button>
+  <button class="r5" onclick="z14()">拧紧</button>
+  <button class="l5" onclick="z15()">拧松</button>
+  <button class="r6" onclick="z16()">拧紧</button>
+  <button class="l6" onclick="z17()">拧松</button>
+  <button class="r7" onclick="z18()">拧紧</button>
+  <button class="l7" onclick="z19()">拧松</button>
+  <button class="r9" onclick="z20()"></button>
+  <button class="r10" onclick="z21()"></button>
+  <button class="r11" onclick="z18()">拧紧</button>
+  <button class="l11" onclick="z19()">拧松</button>
+  <button class="r12" onclick="z20()">左旋</button>
+  <button class="l12" onclick="z21()">右旋</button>
+  <button class="opens" onclick="z22()"></button>
+  <button class="downs" onclick="z23()"></button>
+  <div class="r13"></div>
+  <button class="r14" onclick="z24()">拧紧</button>
+  <button class="l14" onclick="z25()">拧松</button>
+  <button class="r15" onclick="z26()">缩</button>
+  <button class="l15" onclick="z27()">伸</button>
+  <button class="r16" onclick="z28()">左旋</button>
+  <button class="l16" onclick="z29()">右旋</button>
+  <button class="r17" onclick="z30()">左旋</button>
+  <button class="l17" onclick="z31()">右旋</button>
+  <button class="r18" onclick="z32()">拧紧</button>
+  <button class="l18" onclick="z33()">拧松</button>
+  <!-- 实验步骤2 -->
+  <div class="b5" id="bb5">三棱镜顶角以及折射率的测量</div>
+  <button id="b" onclick="next09()">光栅衍射</button>
+  <button id="b0" onclick="next09()"></button>
+  <div class="u1" id="abc1">
+    <div class="u3">实验目的</div>
+    <button class="u10" onclick="next12()"></button>
+    <div class="u2">
+      （1）学会用最小偏向角法测量棱镜材料的折射率</br>
+      （2）了解分光计测量三棱镜顶角的实验原理</br>
+      （3）掌握测量三棱镜顶角的方法，正确测量三棱镜的顶角</div>
+  </div>
+  </div>
+  <div class="u1" id="abd1">
+    <div class="u3">课前测试</div>
+    <div class="u8">
+      1.在转动望远镜过程中，如有一个游标越过360°时，计算时角坐标应加360°（）</div>
+    <div class="u7">
+      <label for="A"> <input name="link" type="radio" id="A9" />对</label></br>
+      <label for="B"> <input name="link" type="radio" id="B9" />错</label></br>
+    </div>
+    <button class="u10" onclick="next13()"></button>
+  </div>
+  <div class="u12" id="abe1">
+    <div class="u3">课前测试</div>
+    <div class="u8">
+      2.由于棱镜是对称的，所以观察时由于摆放位置的不同，观察最小偏向角时望远镜可能在左面观察到现象也可能在右面观察到现象。（）</div>
+    <div class="u7">
+      <label for="A"> <input name="link" type="radio" id="A10" />对</label></br>
+      <label for="B"> <input name="link" type="radio" id="B10" />错</label></br>
+    </div>
+    <button class="u10" onclick="next14()"></button>
+  </div>
+  <div class="u12" id="abd2">
+    <div class="u3">课前测试</div>
+    <div class="u8">
+      3.读出两个游标的读数的目的是（）</div>
+    <div class="u11">
+      <label for="A"> <input name="link" type="radio" id="A11" />A：消除轴转动时产生的误差</label></br>
+      <label for="B"> <input name="link" type="radio" id="B11" />B：仅仅为了后续计算有更多数据以减少误差</label></br>
+      <label for="C"> <input name="link" type="radio" id="C11" />C：就是这样规定的</label></br>
+      <label for="D"> <input name="link" type="radio" id="D11" />D.必须这样测量，不然得不到结果</label>
+    </div>
+    <button class="u13" onclick="next15()"></button>
+  </div>
+  <div class="u12" id="abe2">
+    <div class="u3">课前测试</div>
+    <div class="u8">
+      4.平行光法测量电路时，三棱镜的放置有何要求（）</div>
+    <div class="u11">
+      <label for="C"> <input name="link" type="radio" id="C12" />A.顶点要靠近载物台中心，否则反射光将不能进入望远镜中</label></br>
+      <label for="D"> <input name="link" type="radio" id="D12" />B.顶点对其所对应的底边的垂线应与平行光管平行</label></br>
+      <label for="E"> <input name="link" type="radio" id="E12" />C.顶点对其所对应的底边的垂线应与平行光管垂直</label></br>
+      <label for="F"> <input name="link" type="radio" id="F12" />D.三棱镜要靠近载物台中心，否则反射光将不能进入望远镜中</label>
+    </div>
+    <button class="u13" onclick="next16()"></button>
+  </div>
+  <div class="p1" id="p1">实验步骤</br>
+    <div class="pp2">
+      <button class="p2" onclick="d2()" id="p2">自准法测量三棱镜顶角</button>
+      <div class="p3"></div>
+    </div>
+    <div class="pp4">
+      <button class="p4" onclick="d4()" id="p4">三棱镜折射率测量</button>
+      <div class="p5"></div>
+    </div>
+  </div>
+  <div class="p9" id="p9">
+    <div class="p1p"> 自准法测量三棱镜顶角
+      <button class="p2p" onclick="d9()"></button>
+    </div>
+    <div class="pp01"> <button class="p01" onclick="d10()" id="p01">将三棱镜按图所示置于载物台上，固定游标盘</button>
+      <div class="p02"></div><button class="m0" onclick="d11()">保存</button>
+    </div>
+    <div class="pp13"> <button class="p13" onclick="d12()" id="p13">缓慢转动望远镜，在望远镜中看到“十”字叉丝像记下望远镜在两个游标中的角坐标</button>
+      <div class="p14"></div>
+      <button class="m1" onclick="d13()">保存</button>
+    </div>
+
+    <div class="pp15"> <button class="p15" onclick="d14()" id="p15">用同样的方法测出望远镜相对于三棱镜另一光学面的角坐标</button>
+      <div class="p16"></div>
+      <button class="m2" onclick="d15()">保存</button>
+    </div>
+  </div>
+  <div class="p12" id="p12">
+    <div class="p7p"> 三棱镜折射率测量</div><button class="p8p" onclick="d30()"></button>
+    <div class="pp27"> <button class="p31" onclick="d31()" id="p31">放好三棱镜，转动望远镜以从望远镜中观察彩色谱线</button>
+      <div class="p32"></div>
+      <button class="m10" onclick="d32()">保存</button>
+    </div>
+
+    <div class="pp28"> <button class="p33" onclick="d33()" id="p33">将载物台连同三棱镜稍稍转动，同时观察谱线的移动方向...</button>
+      <div class="p34"></div>
+      <button class="m11" onclick="d34()">保存</button>
+    </div>
+
+    <div class="pp29"> <button class="p35" onclick="d35()" id="p35">将望远镜叉丝竖线对准此谱线，然后锁定载物台，记下两个游标的读数</button>
+      <div class="p36"></div>
+      <button class="m12" onclick="d36()">保存</button>
+    </div>
+    <div class="pp30"> <button class="p37" onclick="d37()" id="p37">移去三棱镜，转动望远镜对准平行光管，使光线与竖直叉丝线重合，记下两个游标的读数</button>
+      <div class="p38"></div>
+      <button class="m13" onclick="d38()">保存</button>
+    </div>
+  </div>
+  <div class="msg" id="msg1">
+    <ul>
+      <li>
+        将载物台连同三棱镜稍稍转动，同时观察谱线的移动方向，判断此时偏向角是增大还是减小，然后认定某一谱线（如绿光），再转动载物台使谱线向偏向角减小的方向移动，并转动望远镜跟踪该谱线。当棱镜转到某个位置时，谱线不再移动，继续使棱镜沿原方向转动时，谱线反而向相反方向移动，即偏向角反而变大，此转折点位置即为最小偏向角位置。
+      </li>
+    </ul>
+    <button class="close" onclick="closedown1()">关闭</button>
+  </div>
+  <image class="fenhua1" alt="请稍后" src="./assets/models/顶角测量.png"></image>
+  <button class="opens4" onclick="h10()"></button>
+  <button class="downs4" onclick="h2()"></button>
+  <button class="r19" onclick="h3()"></button>
+  <button class="r20" onclick="h4()">拧紧</button>
+  <button class="l20" onclick="h5()">拧松</button>
+  <button class="r21" onclick="h6()">左旋</button>
+  <button class="l21" onclick="h7()">右旋</button>
+  <button class="opens5" onclick="h8()"></button>
+  <button class="downs5" onclick="h9()"></button>
+  <button class="r22" onclick="h11()"></button>
+  <button class="r23" onclick="h12()">拧紧</button>
+  <button class="l23" onclick="h13()">拧松</button>
+  <button class="r24" onclick="h14()">左旋</button>
+  <button class="l24" onclick="h15()">右旋</button>
+  <div class="light"></div>
+  <button class="l22" onclick="h16()"></button>
+
+
+  <!-- 实验步骤3 -->
+  <div class="B5" id="BB5">光栅衍射</div>
+  <button id="B2" onclick="next10()">用分光计测定布儒斯特角</button>
+  <button id="B0" onclick="next10()"></button>
+  <div class="u1" id="abc3">
+    <div class="u3">实验目的</div>
+    <button class="u10" onclick="next17()"></button>
+    <div class="u2">
+      （1）观察光栅光谱，理解光栅衍射的基本规律</br>
+      （2）进一步熟悉分光计的调节和使用</br>
+      （3）利用光栅衍射测定光栅常量，光波长，角色散率等。</br></div>
+  </div>
+  <div class="u12" id="abd3">
+    <div class="u3">课前测试</div>
+    <div class="u8">
+      1.实验时平行光垂直入射光栅是为了（）</div>
+    <div class="u11">
+      <label for="A"> <input name="link" type="radio" id="A13" />A.更好地观察光的衍射现象</label></br>
+      <label for="B"> <input name="link" type="radio" id="B13" />B.不这么操作衍射就不会发生
+        C.简化实验</label></br>
+      <label for="C"> <input name="link" type="radio" id="C13" />C.简化实验</label></br>
+      <label for="D"> <input name="link" type="radio" id="D13" />D.纯粹是人为规定</label>
+    </div>
+    <button class="u13" onclick="next18()"></button>
+  </div>
+  <div class="u12" id="abe3">
+    <div class="u3">课前测试</div>
+    <div class="u8">
+      2.对于低压汞灯实验中能看到两条靠的很近的黄色光线，这是因为（）</div>
+    <div class="u11">
+      <label for="C"> <input name="link" type="radio" id="C14" />A.空气中微小颗粒的反射，属于实验误操作</label></br>
+      <label for="D"> <input name="link" type="radio" id="D14" />B.这是正常的，分别是两条特征谱线，黄内和黄外</label></br>
+      <label for="E"> <input name="link" type="radio" id="E14" />C.应该是一根，实验出现错误才出现了两根</label></br>
+      <label for="F"> <input name="link" type="radio" id="F14" />D.光栅出现了问题</label>
+    </div>
+    <button class="u13" onclick="next19()"></button>
+  </div>
+  <div class="x1" id="x1">实验步骤</br>
+    <div class="xx2">
+      <a class="x99" href="Webshell://hello">衍射光谱的观察</a>
+      <div class="x98"></div>
+    </div>
+    <div class="xx8"><button class="x8" onclick="e8()" id="x8">平行光垂直入射光栅</button>
+      <div class="xx7"></div>
+    </div>
+    <div class="xx4">
+      <button class="x4" onclick="e4()" id="x4">用分光计观察光栅色散现象</button>
+      <div class="x5"></div>
+    </div>
+    <div class="xx6"><button class="x6" onclick="e6()" id="x6">光栅常量与光波长的测量</button>
+      <div class="x7"></div>
+    </div>
+  </div>
+  <div class="x10" id="x10">
+    <div class="x3x"> 用分光计观察光栅色散现象
+      <button class="x4x" onclick="e16()"></button>
+    </div>
+    <div class="xx19"><button class="x19" onclick="e17()"
+        id="x19">开灯后转动望远镜到适当位置观察汞灯的的衍射光谱，适当调节狭缝装置，使得谱线与竖直准线平行（平行是因为后续要左右移动望远镜，所以不一定要重合）并被中心水平准线平分</button>
+      <div class="x20"></div>
+      <button class="m3" onclick="e18()">保存</button>
+    </div>
+  </div>
+  <div class="x11" id="x11">
+    <div class="x5x"> 光栅常量与光波长的测量</div>
+    <button class="x6x" onclick="e23()"></button>
+    <div class="xx24"> <button class="x25" onclick="e24()" id="x25">转动望远镜，测量级光谱中绿光与黄光所在位置读数，记录数据，并计算出衍射角。</button>
+      <div class="x26"></div>
+      <button class="m7" onclick="e25()">保存</button>
+    </div>
+  </div>
+  <div class="x12" id="x12">
+    <div class="x7x"> 平行光垂直入射光栅</div><button class="x8x" onclick="e30()"></button>
+    <div class="xx27"> <button class="x31" onclick="e31()"
+        id="x31">将望远镜内的竖直准线与狭缝像重合，关灯后将光栅垂直平行光管放置于载物台上，光栅平面要与载物台下其中两根螺钉连线垂直。</button>
+      <div class="x32"></div>
+      <button class="m10" onclick="e32()">保存</button>
+    </div>
+    <div class="xx28"> <button class="x33" onclick="e33()" id="x33">转动游标盘并调节螺钉，使得亮“十”字像与分划板上方的“十”字像重合</button>
+      <div class="x34"></div>
+      <button class="m11" onclick="e34()">保存</button>
+    </div>
+    <div class="xx29"> <button class="x35" onclick="e35()" id="x35">此时平行光管垂直于光栅。固定游标盘螺钉。</button>
+      <div class="x36"></div>
+      <button class="m12" onclick="e36()">保存</button>
+    </div>
+  </div>
+  <button class="r25" onclick="h17()">左旋</button>
+  <button class="l25" onclick="h18()">右旋</button>
+  <div class="zhunline"></div>
+  <button class="opens6" onclick="h19()"></button>
+  <button class="downs6" onclick="h20()"></button>
+  <button class="l26" onclick="h21()">右旋</button>
+  <button class="l27" onclick="h22()">右旋</button>
+  <button class="turn" onclick="a100()"></button>
+  <button class="r28" onclick="h23()">拧紧</button>
+  <button class="l28" onclick="h24()">拧松</button>
+  <button class="r29" onclick="h25()">拧紧</button>
+  <button class="l29" onclick="h26()">拧松</button>
+  <button class="r30" onclick="h27()">拧紧</button>
+  <button class="l30" onclick="h28()">拧松</button>
+  <button class="r31" onclick="h29()">拧紧</button>
+  <button class="l31" onclick="h30()">拧松</button>
+  <button class="opens7" onclick="h31()"></button>
+  <button class="downs7" onclick="h32()"></button>
+  <button class="r32" onclick="h33()">左旋</button>
+  <button class="l32" onclick="h34()">右旋</button>
+  <div class="zhunline1">
+    <div class="heng1"></div>
+    <div class="shu1"></div>
+  </div>
+  <!-- 实验步骤4 -->
+  <div class="g5" id="gg5">用分光计测定布儒斯特角</div>
+  <button id="g" onclick="next11()">首页</button>
+  <button id="g0" onclick="next11()"></button>
+  <div class="y12" id="y12">
+    <div class="y7y"> 用分光计测定布儒斯特角</div>
+    <div class="yy27"> <button class="y31" onclick="f31()" id="y31">把三棱镜放在载物台上，使其入射角大约为60°，转动望远镜找到反射光线；</button>
+      <div class="y32"></div>
+      <button class="m10" onclick="f32()">保存</button>
+    </div>
+    <div class="yy28"> <button class="y33" onclick="f33()"
+        id="y33">在望远镜的前端安放一偏振片，慢慢转动偏振片，通过望远镜观察反射光线，当发现光线强度最弱时，固定偏振片；</button>
+      <div class="y34"></div>
+      <button class="m11" onclick="f34()">保存</button>
+    </div>
+
+    <div class="yy29"> <button class="y35" onclick="f35()" id="y35">慢慢转动载物台，当载物台转到某一位置时，望远镜中的反射光线将完全消失；</button>
+      <div class="y36"></div>
+      <button class="m12" onclick="f36()">保存</button>
+    </div>
+    <div class="yy30"> <button class="y37" onclick="f37()"
+        id="y37">先固定载物台然后取下偏振片，在望远镜中重新看到偏振光并让其与望远镜的叉丝重合。通过游标盘读出该位置的两游标读数θ1和θ2；</button>
+      <div class="y38"></div>
+      <button class="m13" onclick="f38()">保存</button>
+    </div>
+    <div class="yy24"> <button class="y25" onclick="f24()"
+        id="y25">然后取下三棱镜，转动望远镜使它直接对准平行光管，并使入射光线与望远镜的叉丝重台，再次读出对称的两游标的读数θ1’和θ2’。</button>
+      <div class="y26"></div>
+      <button class="m99" onclick="f25()">保存</button>
+    </div>
+  </div>
+  <image class="fenhua2" alt="请稍后" src="./assets/models/布鲁斯特角.png"></image>
+  <button class="l39" onclick="h31()">右旋</button>
+  <button class="r33" onclick="h32()">左旋</button>
+  <button class="l33" onclick="h33()">右旋</button>
+  <button class="opens8" onclick="h34()"></button>
+  <button class="downs8" onclick="h35()"></button>
+  <button class="r34" onclick="h36()">左旋</button>
+  <button class="l34" onclick="h37()">右旋</button>
+  <button class="r35" onclick="h38()">拧紧</button>
+  <button class="l35" onclick="h39()">拧松</button>
+  <button class="l36" onclick="h40()">右旋</button>
+  <button class="r37" onclick="h41()">拧紧</button>
+  <button class="l37" onclick="h42()">拧松</button>
+  <button class="r38" onclick="h43()">左旋</button>
+  <button class="l38" onclick="h44()">右旋</button>
+
+  <image class="fenhua" alt="请稍后" src="./assets/models/分划板.png"></image>
+  <button class="r1" onclick="z1()">左旋</button>
+  <button class="l1" onclick="z2()">右旋</button>
+  <div class="line">
+    <div class="heng"></div>
+    <div class="shu"></div>
+  </div>
+  <script src="js/lib/three.min.js"></script>
+  <script src="js/lib/OrbitControls.js"></script>
+  <script src="js/lib/FBXLoader.js"></script>
+  <script src="js/lib/inflate.min.js"></script>
+  <script src="js/lib/TweenMax.min.js"></script>
+  <script src="js/lib/stats.module.js"></script>
+  <script src="js/physical1.js"></script>
+
+</body>
+
+</html>
